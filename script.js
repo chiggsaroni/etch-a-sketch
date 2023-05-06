@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 draw.innerHTML = "You can Draw!"
             }
             else {
-                draw.innerHTML = "No Draw!"
+                draw.innerHTML = "Draw off!"
             }
         }
     })
@@ -41,17 +41,17 @@ function createBoard(size) {
 }
 
 function getSize() {
-    let choice = prompt("Enter a number");
+    let input = prompt("Enter a number");
     let message = document.querySelector("#message")
-    if(choice == ""){
+    if(input === ""){
         message.innerHTML = "Please provide a number";
     }
-    else if(choice < 0 || choice >100) {
-        message.innerHTML =  "Please provide a number between 1-100";
+    else if(input < 2 || input > 100) {
+        message.innerHTML =  "Please provide a number between 2-100";
     }
     else {
         message.innerHTML = "Done!";
-        return choice;
+        return input;
 
     }
 }
@@ -67,8 +67,8 @@ function colorDiv(){
     }
 }
 
-function setColor (choice){
-    color = choice;
+function setColor (colorChoice){
+    color = colorChoice;
 }
 
 
