@@ -62,14 +62,15 @@ function colorDiv(){
             this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
         }
         else {
-        this.style.backgroundColor = "black" 
+        this.style.backgroundColor = color 
         }
     }
 }
 
-function setColor (colorChoice){
-    color = colorChoice;
+function setColor (choice){
+    color = choice;
 }
+
 
 function resetBoard() {
     let clear =  document.querySelectorAll("square");
